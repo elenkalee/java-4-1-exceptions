@@ -2,7 +2,6 @@ package ru.netology.repository;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.ls.LSOutput;
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.Shirt;

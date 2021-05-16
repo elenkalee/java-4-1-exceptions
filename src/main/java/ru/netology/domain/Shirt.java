@@ -1,50 +1,21 @@
 package ru.netology.domain;
 
-import java.util.Objects;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
+@EqualsAndHashCode(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Shirt extends Product {
     private String color;
     private String size;
-
-    public Shirt () {
-        super();
-    }
 
     public Shirt(int id, String name, int price, String color, String size) {
         super(id, name, price);
         this.color = color;
         this.size = size;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Shirt shirt = (Shirt) o;
-        return Objects.equals(color, shirt.color) &&
-                Objects.equals(size, shirt.size);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), color, size);
     }
 }
